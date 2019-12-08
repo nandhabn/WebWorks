@@ -10,11 +10,11 @@
 
 ### Bottom navigation
    #### Insgram like design
-      <p>Files</p>
+   <p>Files</p>
          <p>BottomNav.html</p>
          <p>BottomNav.css</p>
    #### Mac dock like design
-      <p>Files</p>
+   <p>Files</p>
          <p>plank.html</p>
          <p>plank.css</p>
 ### Flip Image Login screen
