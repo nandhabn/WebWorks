@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="HappyNewYear.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>HappyNewYear</title>
+</head>
+
+<body>
+    <div class="blur"></div>
+    <div class="shadowlayer">
+        <div class="wish">Counting Down </div>
+        <div class="countdown">
+            <div id="days" class="days"></div>
+            <div id="hours" class="hours"></div>
+            <div id="mins" class="mins"></div>
+            <div id="secs" class="secs"></div>
+        </div>
+    </div>
+    <script>
+        var newyear= new Date( "jan 1, 2020 00:00:00").getTime()
+    function update()
+    {   
+        var date= new Date().getTime();
+        remainingsecs = newyear - date;
+        
+        var secs = 1000; 
+        var mins = 60 * secs 
+        var hours = 60 * mins
+        var days = 24 * hours
+        $("#secs").text(Math.floor((remainingsecs%mins)/secs))
+        $("#mins").text(Math.floor((remainingsecs%hours)/mins))
+        $("#hours").text(Math.floor((remainingsecs%days)/hours))
+        $("#days").text(Math.floor(remainingsecs/days))
+        
+    }
+    setInterval(()=>update(),1000)
+    </script>
+</body>
+
+</html>
