@@ -17,14 +17,14 @@
                 <img src="./nandha.jpg" alt="nandha">
                 <a href="#" class="uname">Nandha</a>
             </div>
-            <div class="back">
+            <!-- <div class="back">
                 <img src="./nandha.jpg" alt="nandha">
                 <a href="#" class="uname">Nandha</a>
                 <input type="password" name="password" placeholder="Enter password" class="input pass">
                 <a class="input sbtn" href="#">Submit</a>
-            </div>
+            </div> -->
         </div>
-        <div class="user">
+        <!-- <div class="user">
             <div class="front">
                 <img src="./black devil.jpg" alt="nandha">
                 <a href="#" class="uname">Black Devil</a>
@@ -33,10 +33,32 @@
                 <img src="./black devil.jpg" alt="nandha">
                 <a href="#" class="uname">Black Devil</a>
                 <input type="password" name="password" placeholder="Enter password" class="input pass">
-                <a class="input sbtn" href="#">Submit</a>
+                <a class="input sbtn" onclick="login()" href="#">Submit</a>
             </div>
-        </div>
+        </div> -->
     </div>
+
+    
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBWzb4AuPaBM0DgTg17aX23YG3Dp3CKdsE",
+    authDomain: "example-fa4db.firebaseapp.com",
+    databaseURL: "https://example-fa4db.firebaseio.com",
+    projectId: "example-fa4db",
+    storageBucket: "example-fa4db.appspot.com",
+    messagingSenderId: "924802115276",
+    appId: "1:924802115276:web:87ba860887dec4f20d4469"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+
+  function login()
+  {
+      firebase.auth().createUserWithEmailAndPassword("nandhubn66@gmail.com","nandha").then(()=>{console.log("hey there")}).catch(()=>{console.log("error")})
+  }
+</script>
 </body>
 
 </html>

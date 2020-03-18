@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,11 +11,65 @@
 </head>
 
 <body>
-    <div class="bar"> 
-        <i class="fas fa-search"></i>
-        <input type="text" class="sear" placeholder="Search here"/>
-        <i class="fas fa-microphone"></i>
+    <div class="bar">
+        <div class="main">
+            <i class="fas fa-search"></i>
+            <input type="text" class="sear" placeholder="Search here" id="searchbar" />
+            <i class="fas fa-microphone"></i>
+        </div>
+        <div id="result" class="result">
+            <table cellpadding="10">
+
+            </table>
+        </div>
     </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+        let searchItem = [
+            {
+                a: "hi",
+                b: "hello",
+                c: "nandha"
+            },
+            {
+                a: "na",
+                b: "jsbh",
+                c: "nandha"
+            },
+            {
+                a: "hi",
+                b: "kj",
+                c: "nandha"
+            },
+        ]
+        let input = document.querySelector("input")
+        let match = []
+        input.onkeyup = () => {
+            match = []
+            let val2 = input.value
+            if (val2 !== "") {
+                searchItem.forEach(val => {
+                    if ((val.a.startsWith(val2) || val.b.startsWith(val2)) || val.c.startsWith(val2)) {
+                        match.push(val)
+                    }
+                })
+            }
+            var table = $("table")
+            table.empty()
+            match.forEach(val => {
+                table.append(createRow(val, val2))
+            })
+        }
+        function createRow(val, key) {
+            let a, b, c;
+            val.a.startsWith(key) ? a = "<span>" + val.a.slice(0, key.length) + "</span>" + val.a.slice(key.length) : a = val.a;
+            val.b.startsWith(key) ? b = "<span>" + val.b.slice(0, key.length) + "</span>" + val.b.slice(key.length) : b = val.b;
+            val.c.startsWith(key) ? c = "<span>" + val.c.slice(0, key.length) + "</span>" + val.c.slice(key.length) : c = val.c;
+            return `<tr><td>${a}</td><td>${b}</td><td>${c}</td></tr>`
+        }
+    </script>
+    </script>
 </body>
 
 </html>

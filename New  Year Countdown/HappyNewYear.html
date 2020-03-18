@@ -22,7 +22,7 @@
         </div>
     </div>
     <script>
-        var newyear= new Date( "jan 1, 2020 00:00:00").getTime()
+        var newyear= new Date( "Dec 06, 2020 00:00:00").getTime()
     function update()
     {   
         var date= new Date().getTime();
@@ -32,10 +32,10 @@
         var mins = 60 * secs 
         var hours = 60 * mins
         var days = 24 * hours
-        $("#secs").text(Math.floor((remainingsecs%mins)/secs))
-        $("#mins").text(Math.floor((remainingsecs%hours)/mins))
-        $("#hours").text(Math.floor((remainingsecs%days)/hours))
-        $("#days").text(Math.floor(remainingsecs/days))
+        $("#secs").text(Math.abs(Math.floor((remainingsecs%mins)/secs)))
+        $("#mins").text(Math.abs(Math.floor((remainingsecs%hours)/mins)))
+        $("#hours").text(Math.abs(Math.floor((remainingsecs%days)/hours)))
+        $("#days").text(Math.abs(Math.floor(remainingsecs/days)))
         
     }
     setInterval(()=>update(),1000)
