@@ -1,0 +1,32 @@
+#chatbd p {
+    margin: 5px 10px;
+    border-radius: 3px;
+    line-height: 20px;
+    color: white;
+    padding: 10px;
+    background-color: gray;
+}
+
+#chatbd {
+    overflow-y: auto;
+}
+
+#messIn {
+    padding-left: 3px;
+    margin: 1px 18px;
+    border-radius: 50px;
+    height: 25px;
+    width: 50%;
+}
+
+#btn {
+    border-radius: 50%;
+}
+
+.msgsnd {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    right: 0px;
+    position: fixed;
+}
