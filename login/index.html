@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: absolute;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        .container {
+            width: 390px;
+            height: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px grey;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+        }
+
+        .blur {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: blur(4px) opacity(100%);
+            z-index: -1;
+            overflow: hidden;
+        }
+        .blur img {
+            min-width: 750px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ico {
+            font-size: 100px;
+            flex: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100px;
+            width: 100%;
+            line-height: 100px;
+        }
+
+        .ico i {
+            vertical-align: middle;
+            overflow: hidden;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: -8px 11px 54px -23px grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formcontainer {
+            flex: 3;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 30%;
+        }
+
+        .formcontainer * {
+            width: 350px;
+            height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            border: 0;
+            border: 1px solid #e9eaed;
+            outline: none;
+            position: relative;
+        }
+
+        .formcontainer input:focus {
+            box-shadow: 0 0px 3px grey;
+        }
+
+        .formcontainer input::after {
+            width: 100%;
+            background-color: #999899;
+            height: 1px;
+            content: "";
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .forget {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .forget a {
+            color: #999899 !important;
+        }
+
+        .sticky {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+        }
+
+        .h-left {
+            flex: 2;
+            font-size: 45px;
+            margin-left: 30px;
+            display: flex;
+        }
+        .h-right a {
+            flex: 1;
+            text-decoration: none;
+            color: white;
+            background-color: green;
+        }
+        .h-right a span{
+            padding: 50px;
+        }
+
+        .h-right {
+            flex: 1;
+            justify-self: flex-end;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/5a285f8b76.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   
+    <div class="blur">
+        <img src="https://ichef.bbci.co.uk/news/410/cpsprodpb/11421/production/_104898607_gettyimages-878852718.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="ico"><i class="fa fa-user" aria-hidden="true"></i></div>
+        Login
+        <div class="formcontainer">
+            <input type="text" name="name" id="name" placeholder="Username">
+            <input type="password" name="password" id="pass" placeholder="Password">
+            <button type="submit">
+                Submit
+            </button>
+        </div>
+        <div class="forget"><a href="#">Forget Password?</a></div>
+    </div>
+</body>
+
+</html>

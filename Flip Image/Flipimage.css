@@ -14,14 +14,14 @@ body{
     background: #2c3e50;
     
 }
-/* .center
+.center
 {
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     display: flex;
-} */
+} 
 .front{
     position: absolute;
     padding: 10px;
@@ -29,20 +29,20 @@ body{
     background: #3498db;
     height: 100%; 
     display: flex;
-    /*
+    
     transition: .5s  ;
     backface-visibility: hidden;
     justify-content: center;
     align-items: center;
-    flex-direction: column; */
+    flex-direction: column; 
 }
 .user{
-    /* position: relative;
+    position: relative;
     width: 320px;
     height: 450px;
     overflow: hidden;
     margin: 10px;
-    flex:1; */
+    flex:1; 
 }
 .user:hover > .front{
     transform:rotateY(180deg);
@@ -70,8 +70,8 @@ body{
     width: 300px;
 }
 .back img{
-    width: 250px;
-    position: absolute;
+    height: 250px;
+    /* position: absolute; */
     z-index: -1;
 }
 
@@ -90,7 +90,7 @@ body{
     font-size: 30px;
     color: #ecf0f1!important;
     width: 250px;
-    line-height: 250px;
+    /* line-height: 250px; */
 }
 .back .input{
     outline: none;
@@ -101,7 +101,8 @@ body{
     text-align: center;
     border-radius: 50px;
     margin-bottom: 5px;
-    line-height: 25px;
+    line-height: 40px;
+
 }
 
 .sbtn{
@@ -109,4 +110,5 @@ body{
     background: linear-gradient(90deg, #2ecc71,#27ae60);
     font-weight: bold;
     color: #ecf0f1!important;   
+    line-height: normal!important;
 }
